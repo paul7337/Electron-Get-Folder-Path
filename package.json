@@ -1,0 +1,16 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "testing_electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "paul lawton",
+  "devDependencies": {
+    "electron": "^3.0.0"
+  }
+}
