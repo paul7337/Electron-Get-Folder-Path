@@ -3,7 +3,7 @@
 ### About 
 Found it difficult to find a complete example of this.
 
-Content Largely Derived from the following sources
+Content largely derived from the following sources
 
 * <a href="https://jaketrent.com/post/select-directory-in-electron/">https://jaketrent.com/post/select-directory-in-electron/</a>
 * <a href="https://www.tutorialspoint.com/electron/electron_system_dialogs.htm">https://www.tutorialspoint.com/electron/electron_system_dialogs.htm</a>
