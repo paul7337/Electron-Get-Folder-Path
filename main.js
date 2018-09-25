@@ -17,36 +17,14 @@ function createWindow() {
 ipcMain.on('openFolder', (event, path) => { 
    const {dialog} = require('electron') 
 
-   const items = dialog.showOpenDialog(win, {
-    properties: ['openDirectory']
-  });
+    dialog.showOpenDialog(win, {
+      properties: ['openDirectory']
+    }, 
+      paths => respondWithPath(paths)
+    );
 
-  event.sender.send('folderData', items) 
-
-
-  //  const fs = require('fs') 
-  //  dialog.showOpenDialog(function (fileNames) { 
-      
-  //     // fileNames is an array that contains all the selected 
-  //     if(fileNames === undefined) { 
-  //        console.log("No file selected"); 
-      
-  //     } else { 
-  //        readFile(fileNames[0]); 
-  //     } 
-  //  });
-   
-  //  function readFile(filepath) { 
-  //     fs.readFile(filepath, 'utf-8', (err, data) => { 
-         
-  //        if(err){ 
-  //           alert("An error ocurred reading the file :" + err.message) 
-  //           return 
-  //        } 
-         
-  //        // handle the file content 
-  //        event.sender.send('fileData', data) 
-  //     }) 
-  //  } 
+  function respondWithPath(paths) {
+    event.sender.send('folderData', paths) 
+  }
 })  
 app.on('ready', createWindow)
