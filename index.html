@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset = "UTF-8"> 
+      <title>File read using system dialogs</title> 
+   </head> 
+   
+   <body> 
+      <button id ="opener">Do it</button>
+
+
+      <script type = "text/javascript"> 
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('opener').addEventListener('click', function() {
+              openFile();
+            });
+        });
+         const {ipcRenderer} = require('electron');
+
+         function openFile() {
+          ipcRenderer.send('openFolder', () => { 
+              console.log("Event sent."); 
+          });
+        }
+         
+         ipcRenderer.on('folderPath', (event, data) => { 
+            console.log(data) 
+         }) 
+      </script> 
+   </body> 
+</html>
