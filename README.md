@@ -12,3 +12,9 @@ Content largely derived from the following sources
 You'll need to have basic electron setup. Information on that can be found <a href="https://electronjs.org/docs/tutorial/first-app">here</a>
 
 Then just switch out the main and index files, and it should run ok.
+
+## OR
+If you already have node installed globally, you should be able to just run command:
+npm install
+Then to run it:
+npm start
