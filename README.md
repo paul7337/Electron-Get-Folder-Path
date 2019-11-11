@@ -13,7 +13,7 @@ You'll need to have basic electron setup. Information on that can be found <a hr
 
 Then just switch out the main and index files, and it should run ok.
 
-## OR
+#### OR
 If you already have node installed globally, you should be able to just run command:
 npm install
 Then to run it:
